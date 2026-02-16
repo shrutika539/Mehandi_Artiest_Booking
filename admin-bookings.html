@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Booked Services</title>
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">🌺 Henna Artistry</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="admin-bookings.html">Booked Services</a></li>
+      <li><a href="#" onclick="adminLogout()">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="content">
+  <h2>Total Bookings: <span id="totalBookings">0</span></h2>
+
+  <table>
+   <thead>
+  <tr>
+    <th>SR.No</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Service</th>
+    <th>Date</th>
+    <th>Status</th>
+   
+  </tr>
+</thead>
+
+    <tbody id="bookingTable"></tbody>
+  </table>
+</section>
+
+<!-- ✅ Scripts (correct order) -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="admin-bookings.js"></script>
+
+</body>
+</html>

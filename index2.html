@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #6a82fb, #fc5c7d);
+
+        }
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        .login-options {
+            display: flex;
+            gap: 40px;
+        }
+
+        .login-card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 30px 50px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .login-card:hover {
+            transform: scale(1.05);
+        }
+
+        .login-card h2 {
+            margin-bottom: 20px;
+        }
+
+        .login-card span {
+            font-size: 50px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .back-home {
+    margin-top: 600px;
+    text-align: left;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 60px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.back-home a {
+    display: inline-block;   /* prevents full-width */
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    background: none;
+    padding: 0;
+}
+
+.back-home a:hover {
+    color: #eeedf0;
+    /* text-decoration: underline; */
+}
+
+    </style>
+</head>
+<body>
+    <h1>Choose Login Type</h1>
+
+    <div class="login-options">
+        <div class="login-card" onclick="goToLogin('user')">
+            <span>👤</span>
+            <h2>User Login</h2>
+        </div>
+
+        <div class="login-card" onclick="goToLogin('admin')">
+            <span>🔒</span>
+            <h2>Admin Login</h2>
+        </div>
+    </div>
+
+    <script>
+        function goToLogin(type) {
+            if(type === "user") {
+                window.location.href = "login.html"; // redirect to user login
+            } else if(type === "admin") {
+                window.location.href = "admin-login.html"; // redirect to admin login
+            }
+        }
+    </script>
+</body>
+</html>
